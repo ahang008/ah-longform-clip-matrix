@@ -13,7 +13,7 @@
 3. 检查代词、连接词、数字口径和因果关系。
 4. 用渲染脚本生成 MP4，保留来源时间映射，再检查实际听感。
 
-完整判断规则见 [SKILL.md](SKILL.md)。为什么这样设计，见 [设计哲思](docs/设计哲思.md)和[可编辑 Excalidraw 图](docs/长内容切片矩阵设计哲思.excalidraw)。
+完整判断规则见 [SKILL.md](SKILL.md)。为什么这样设计，见 [设计哲思](docs/设计哲思.md)；对外介绍可用[可编辑 Skill 架构图](docs/长内容切片矩阵Skill架构.excalidraw)。本 Skill 已收录于[阿杭 Skills 工具目录](https://github.com/ahang008/ah-skills)。
 
 ## 安装与使用
 
@@ -26,11 +26,11 @@ python3 scripts/render_matrix.py plan.json --check
 python3 scripts/render_matrix.py plan.json --render
 ```
 
-`plan.json` 格式见 [SKILL.md](SKILL.md)。渲染器要求输入视频有音轨，不处理独立字幕轨；画面里已有的字幕会随画面保留。渲染器不会判断语义是否完整，也不会把长视频自动转写、改成竖屏或发布到平台。
+`plan.json` 格式见 [SKILL.md](SKILL.md)。渲染器要求输入视频有音轨，不处理独立字幕轨；画面里已有的字幕会随画面保留。渲染器不会判断语义是否完整，也不会把长视频自动转写、改成竖屏或发布到平台。交付前还需要逐条按最终顺序完整试听；如果没有实际试听，必须把听感标为未验证。
 
 ## 验证
 
-`python3 -m unittest discover -s tests -v` 会用本地合成素材检查跨位置重排、视频画面顺序、音轨、时长和来源记录。发布前还用一条 8 分钟口播的 5 条真实重组方案完成了生成与解码验证。真人听感和商业表述仍需对每次素材单独确认。
+`python3 -m unittest discover -s tests -v` 会用本地合成素材检查跨位置重排、视频画面顺序、音轨、时长和来源记录。曾用一条约 8 分钟的口播生成 5 条候选切片，并完成生成与解码验证；这批旧样本尚未按新版规则完成逐条完整试听，不能视为内容验收通过。真人听感和商业表述仍需对每次素材单独确认。
 
 ## 来源与许可
 
