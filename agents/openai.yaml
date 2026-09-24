@@ -1,0 +1,3 @@
+interface:
+  display_name: "长内容切片矩阵"
+  short_description: "按语义块重组长内容，生成能独立看懂的切片"
