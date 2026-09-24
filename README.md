@@ -15,6 +15,8 @@
 
 完整判断规则见 [SKILL.md](SKILL.md)。为什么这样设计，见 [设计哲思](docs/设计哲思.md)；对外介绍可用[可编辑 Skill 架构图](docs/长内容切片矩阵Skill架构.excalidraw)。本 Skill 已收录于[阿杭 Skills 工具目录](https://github.com/ahang008/ah-skills)。
 
+![长内容切片矩阵 Skill 架构预览](assets/长内容切片矩阵Skill架构.png)
+
 ## 安装与使用
 
 把仓库链接发给 Codex，要求安装这个 Skill。安装后发送本地长视频、音频或逐字稿，并说“用 `ah-longform-clip-matrix` 做切片矩阵”。
